@@ -4,22 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서울아산병원 로그인</title>
-    <link rel="stylesheet" href="HTML_종합과제.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header class="head">
-        <div class="box">
-            <h1 class="picture">서울아산병원</h1>
-            <nav>
-                <ul class="menu">
-                    <li><a href="https://www.amc.seoul.kr/asan/member/join/intro.do">회원가입</a></li>
-                    <li><a href="https://www.amc.seoul.kr/asan/member/login.do">로그인</a></li>
-                    <li><a href="https://www.amc.seoul.kr/asan/member/findid/certify.do">아이디찾기</a></li>
-                    <li><a href="https://www.amc.seoul.kr/asan/member/findpass/certify.do">임시비밀번호 발급받기</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <main>
         <section class="login">
             <h2>로그인</h2>
@@ -28,16 +15,28 @@
                 <input type="text" id="user-id" placeholder="" required>
                 <label for="user-password">비밀번호</label>
                 <input type="password" id="user-password" placeholder="" required>
+                <button type="submit">로그인</button>
                 <div class="option">
                     <label for="remember">아이디저장</label>
                     <input type="checkbox" id="remember">
                 </div>
-                <button type="submit">로그인</button>
             </form>
             <div class="login-help">
                 <a href="https://www.amc.seoul.kr/asan/member/findid/certify.do">아이디찾기</a>
                 <a href="https://www.amc.seoul.kr/asan/member/findpass/certify.do">임시비밀번호 발급받기</a>
             </div>
+            <div class="login-info">
+                <p>서울아산병원앱 회원정보와 연동되지 않습니다. 서울아산병원 홈페이지 가입 후
+                    다양한 정보와 맞춤 서비스를 이용하실 수 있습니다.</p>
+                <p>의무기록사본은 로그인 없이 신청/결제 및 출력이 가능합니다.</p> 
+                <a href="https://www.amc.seoul.kr/asan/issuepayguide/dutyrecordcopy/dutyRecordCopy.do" class="button-small">의무기록사본발급 바로가기</a> 
+                <ul>
+                    <li>회원님의 개인정보보호를 위하여 약 10분 동안 화면 이동이 없을 경우 자동으로
+                    로그아웃 처리됩니다.</li>
+                    <li>비밀번호는 주기적으로 변경하고 타인에게 노출되지 않도록 주의하시기 바랍니다.</li>
+                    <li>로그인 후 모든 정보는 암호화하여 전송됩니다.</li>
+                </ul>
+            </div>    
         </section>
     </main>
 </body>

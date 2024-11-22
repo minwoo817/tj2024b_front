@@ -145,6 +145,7 @@ console.log(결과상자) // 5
 //변수값 호출과 변수값 수정은 다르다*/
 
 // 5. (복합대입)연산자
+/*
 10; //리터럴 10
 let 변수 = 10; //리터럴 10을 변수에 대입
 변수 += 3; console.log(변수) // 13
@@ -168,3 +169,20 @@ let 결과1 = 점수 >= 80 ? '합격' : '불합격';
 console.log(`결과 : ${결과1}`)
 let 결과2 = 점수 >=80 ? '합격' : 점수 >= 60 ? '재시험' : '불합격'
 console.log(`결과 : ${결과2}`)
+*/
+//[지문9] 1차점수와 2차점수 prompt 함수로 각 입력받아서 총점이 150점 이상이면 합격 아니면 불합격 html <h3>에 표시하시오.
+/*
+let score1 = Number(prompt("1차 점수를 입력하세요"))
+let score2 = Number(prompt("2차 점수를 입력하세요"))
+let total = score1 + score2;
+let outHTML = `<h3> 총점은 ${total >= 150 ? '합격' : '불합격'} </h3>`
+document.write(outHTML)
+*/
+//[지문10] 두 사람의 이름을 prompt 함수로 각 입력받아서 만일 이름이 '유재석'이면 뒤에(방장)이라고 이름 뒤에 붙이고 아니면 생략 HTML의 <ol>에 표시하시오.
+let name1 = prompt("첫번째 이름을 입력하세요")
+let name2 = prompt("두번째 이름을 입력하세요")
+//만약에 name1 변수값이 '유재석'이면 name1 값 뒤에 (방장)붙이고 아니면 그대로 name1변수 값을 수정
+name1 = name1 == '유재석' ? `${name1}(방장)` : name1
+name2 = name2 == '유재석' ? `${name2}(방장)` : name2
+let outHTML = `<ol> <li>${name1}</li> <li>${name2}</li> </ol>`
+document.write(outHTML)
