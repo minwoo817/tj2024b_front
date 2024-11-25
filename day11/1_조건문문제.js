@@ -226,5 +226,18 @@ else {
     sheetList[sheet1 - 1] = 'O' // 예약 성공 시 입력받은 좌석에 값 변경
 }
 */
-let carArray = [ '250어7142' , '142가7415' ]
-let locationArray = [ 'A1' , 'B3' ]
+/*
+let carArray = [ '250어7142' , '142가7415' , '25하1234']
+let locationArray = [ 'A1' , 'B3', 'C2' ]
+let carnumber = prompt("차량 번호 입력하세요")
+let exists = carArray.indexOf(carnumber) //.indexOf(찾을 데이터) : 존재하면 인덱스 반환, 없으면 -1
+if(exists == -1){ //-1이면 검색된 차량번호가 없다
+    console.log('입력한 차량번호는 주차 내역이 없습니다.')
+}
+else { //-1이 아니면 차량번호가 존재한다.
+    console.log(`입력한 차량번호의 주차 위치 : ${locationArray[exists]}`)
+}
+*/
+// 응용 : 서로 다른 속성의 값들을 하나로 표현하는 방법
+// 1. CSV(, 쉼표된 텍스트) : '250어7142, A1'
+// 2. 객체 : {차량번호 : '250어7142', 위치 : 'A1'}
