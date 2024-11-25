@@ -67,14 +67,19 @@
     position: relative;
     padding-bottom: 17px;
     width: 500px;
-    border-bottom: 1px solid #dfdfdf;
+    top: -30px;
   }
   
   .info1 p {
     display: inline-block;
     font-size: 11px;
   }
-  
+
+  .info2 {
+    position: relative;
+    border-top: 1px solid #dfdfdf;
+  }
+
   .whiteSmBtn {
     background-color: white;
     color: black;
