@@ -20,11 +20,18 @@
 */
 let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설']
 let movieRating = [8, 4, 7, 6]
-let out = ''
-let count = 0;
-for(let i = 0; i <= 3; i++){
+let outHTML = ``
+for(let index = 0; index < movieNames.length; index++){
+    outHTML += `<div> <span> ${movieNames[index]} </span> `
+    let jHTML = ``
     for(let j = 1; j <= 10; j++){
-        
+        if(j <= movieRating[index]){
+            jHTML += `★`
+        }
+        else{
+            jHTML += `☆`
+        }
     }
+    outHTML += `<span> ${jHTML} </span> </div>`
 }
-
+document.write(outHTML)
