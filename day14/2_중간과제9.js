@@ -16,28 +16,10 @@
         5. 각 함수별 기능 구현 후 HTML(onclick) 연동
         6. 테스트
 */
-let 주차 = []
-function 차량함수(){
-    let carnum = document.querySelector('.carNum').value;
-    let carplace = document.querySelector('.carPlace').value;
-    let board = `${carnum},${carplace}`
-    주차.push(board);
+let parkinglot = []
+let time = []
 
-    입차함수();
-}
+let element = document.querySelector('.parkinglot')
+let message = document.querySelector('.message')
 
-function 입차함수(){
-    let carin = document.querySelector('.carIn');
-    let html = ''
-    for(let i = 0; i <= 주차.length - 1; i++){
-        let board = 주차[i];
-        if( 주차.indexOf( carplace ) != -1 ){  
-            alert( '입차불가' ); 
-            continue;
-        }
-        else{
-            alert('입차성공');
-        }
-    }
-    body.innerHTML = html;
-}
+
