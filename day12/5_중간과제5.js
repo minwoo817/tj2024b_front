@@ -18,6 +18,7 @@
         ㅁ  ㅁ
         ㅁ  ㅁ
 */
+/*
 let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설']
 let movieRating = [8, 4, 7, 6]
 let outHTML = ``
@@ -35,3 +36,18 @@ for(let index = 0; index < movieNames.length; index++){
     outHTML += `<span> ${jHTML} </span> </div>`
 }
 document.write(outHTML)
+*/
+let seat = [0, 1, 1, 0, 0, 1];
+let empty = `<span style = "color: blue">빈좌석</span>`;
+let reserved = `<span style = "color: red">예약좌석</span>`;
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 2; j++) {
+    let index = i * 2 + j;
+    if (seat[index] == 0) {
+      document.write(empty + '');
+    } else {
+      document.write(reserved + '');
+    }
+  }
+  document.write(`<br />`);
+}
