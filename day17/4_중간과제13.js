@@ -80,6 +80,8 @@ function 수정함수(수정할할일코드){
                 // - (1) 할일목록[index].할일상태 => true/false
                 // - (2) !true/!false
                 // - (3) 할일목록[index].할일상태 = true/false 
+            //let 할일상태 = 할일목록[index].할일상태
+            //할일목록[index].할일상태 = !할일상태;
             break;
         }
     }
