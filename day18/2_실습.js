@@ -47,7 +47,7 @@ function 도서출력(){
                     <td>${info.pub}</td> 
                     <td><button type="button" onclick = "도서수정(${info.bookNum})">수정</button> 
                     <button type="button" onclick = "도서삭제(${i})">삭제</button> 
-                    
+                    <button type="button" onclick = "재고등록입력(${info.bookNum})">재고등록</button>
                 </td>
             </tr>`;
     }
@@ -114,4 +114,40 @@ function 도서삭제(index){
     bookList.splice(index, 1)
     console.log(bookList)
     도서출력();
+}
+function 재고등록입력(bookIndex) {
+    document.querySelector('#stockRegi').innerHTML = `
+        <h3>재고 등록</h3>
+        수량 <input type="text" class="stockNum"/>
+        날짜 <input type="date" class="stockDate"/>
+        <button type="button" onclick="재고등록(${bookIndex})">등록</button>
+    `
+}
+
+function 재고등록(bookIndex) {
+    const stock = {
+        'stockNum': stockNum++,
+        'bookNum': bookIndex,
+        'changeNum': document.querySelector('.stockNum').value,
+        'date': document.querySelector('.stockDate').value
+    }
+    stockList.push(stock)
+    재고출력()
+}
+
+function 재고출력() {
+    tbody = document.querySelector('#stockList > table > tbody')
+
+    let html = ''
+    for (let i = 0; i < stockList.length; i++) {
+        html += `
+            <tr>
+                <td>${stockList[i].stockNum}</td>
+                <td>${stockList[i].bookNum}</td>
+                <td>${stockList[i].changeNum}</td>
+                <td>${stockList[i].date}</td>
+            </tr>
+        `
+    }
+    tbody.innerHTML = html
 }
